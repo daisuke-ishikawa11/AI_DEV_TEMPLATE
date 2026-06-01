@@ -1,0 +1,21 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project generated files
+brain/raw/*
+!brain/raw/.gitkeep
+brain/wiki/*
+!brain/wiki/concepts/
+!brain/wiki/people/
+!brain/wiki/index.md
+brain/reports/*
+!brain/reports/.gitkeep
+
+# Claude / AI settings
+.claudeignore
