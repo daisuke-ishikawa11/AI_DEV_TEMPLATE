@@ -1,6 +1,7 @@
 # CLAUDE.md (Root System Instructions for Claude Code)
 
-このファイルは、Claude Code 等のAIエージェントが `FX_AI_SYSTEM` にアクセスした際に最初に読み込まれるエントリーポイントです。
+このファイルは、Claude Code 等のAIエージェントが本リポジトリにアクセスした際に読み込まれるエントリーポイントです。  
+**OpenAI Codex** では同内容を `AGENTS.md` が担います（スキルは `.agents/skills/` を共有）。
 
 > [!CAUTION] 
 > **絶対ルールの継承 (CRITICAL)**
@@ -9,9 +10,10 @@
 
 ## 1. ナレッジベース（brain）の運用について
 本システムでは、`brain/` フォルダ内で「Andrej Karpathy方式」に基づく自律的知識管理システム（第二の脳）を運用しています。
-`brain/` フォルダ内のファイルの整理や参照を行う際は、必ず `brain/CLAUDE.md` を読み込み、そこに記載されているハイブリッド運用ルール（raw / wiki / reports）に従ってください。
+`brain/` フォルダ内のファイルの整理や参照を行う際は、必ず `brain/CLAUDE.md`（Codex では `brain/AGENTS.md`）を読み込み、そこに記載されているハイブリッド運用ルール（raw / wiki / reports）に従ってください。
 - 既存の `MEMORY.md` や `daily/` などのレガシーファイルは**絶対に破壊・移動しない**こと。
 
 ## 2. スキル (Skills) の利用
-Claude Code から利用可能な全てのスキル（`kb-compile`, `kb-report`, `kb-lint` などのナレッジ系スキルのほか、`web3-polymarket`, `quant-finance-research`, `systematic-debugging` などの既存の開発・分析スキル群）は `.claude/skills/` 配下にインストールされています。
-タスクを実行する際は、まず `/` (スラッシュ) コマンドでこれらのスキルが利用できないか確認し、積極的にスキルをロードして活用してください。
+ナレッジ系スキル（`kb-compile`, `kb-report`, `kb-lint`）は **`.agents/skills/`** に配置されています（Claude Code 向けの同一内容は `.claude/skills/` にもあります）。Codex では `$kb-compile` のように `$` プレフィックスで呼び出せます。
+その他の開発・分析スキルは `.claude/skills/` やユーザー環境に追加インストールしてください。
+タスクを実行する際は、まず `/` (スラッシュ) または `$` でスキルが利用できないか確認し、積極的にスキルをロードして活用してください。

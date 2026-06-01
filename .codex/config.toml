@@ -1,0 +1,8 @@
+# Project-scoped Codex configuration
+# https://developers.openai.com/codex/config-advanced
+
+# AGENTS.md が無いディレクトリでは CLAUDE.md / GEMINI.md も指示として読む（1ディレクトリあたり1ファイルまで）
+project_doc_fallback_filenames = ["GEMINI.md", "CLAUDE.md"]
+
+# ルート AGENTS.md + brain/AGENTS.md + GEMINI 参照指示を収めるため上限を拡張（既定 32 KiB）
+project_doc_max_bytes = 65536

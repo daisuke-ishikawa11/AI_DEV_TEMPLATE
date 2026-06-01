@@ -1,7 +1,7 @@
 # CLAUDE.md (Vault Operating Manual)
 
 このファイルはエージェントに対する Vault（brain）全体の指示書です。
-AIとして `brain/` にアクセスする際はこの指示に従ってください。
+AIとして `brain/` にアクセスする際はこの指示に従ってください。OpenAI Codex では同等の内容を `brain/AGENTS.md` が担います。
 
 > [!CAUTION] 
 > **ルールの優先順位**
